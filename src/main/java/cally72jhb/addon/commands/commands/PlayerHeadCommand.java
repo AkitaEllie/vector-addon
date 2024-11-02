@@ -16,6 +16,7 @@ import net.minecraft.item.Items;
 import net.minecraft.nbt.StringNbtReader;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.nbt.NbtCompound;
 
 import java.util.Random;
 
