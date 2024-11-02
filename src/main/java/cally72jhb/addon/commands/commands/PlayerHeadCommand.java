@@ -70,11 +70,12 @@ public class PlayerHeadCommand extends Command {
 
                         if (array != null) {
                             if (amount > 1) stack.setCount(MathHelper.clamp(amount, 1, 64));
-
-                            stack.setNbt(StringNbtReader.parse(
+                                NbtCompound nbtData = StringNbtReader.parse(
                                     "{SkullOwner:{Id:" + id + ",Properties:{textures:[{Value:\""
                                             + array.get("properties").getAsJsonArray().get(0).getAsJsonObject().get("value").getAsString()
-                                            + "\"}]}}}")
+                                            + "\"}]}}}");
+                                stack.setNbt(nbtData);    
+                            stack.setNbt(
                             );
                         }
                     }
